@@ -30,7 +30,7 @@ class DuplicateWindowHelper:
 	def _insert_menu(self):
 		manager = self._window.get_ui_manager()
 		self._action_group = gtk.ActionGroup("DuplicatePluginActions")
-		self._action_group.add_actions([("Duplicate", None, _("Duplicate"), "<control><shift>d", _("Duplicate current line, current selection or selected lines"), self.on_duplicate_activated)])
+		self._action_group.add_actions([("Duplicate", None, _("Duplicate Line"), "<control><shift>d", _("Duplicate current line, current selection or selected lines"), self.on_duplicate_activated)])
 		manager.insert_action_group(self._action_group, -1)
 		self._ui_id = manager.add_ui_from_string(ui_str)
 
